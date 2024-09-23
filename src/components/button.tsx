@@ -1,14 +1,14 @@
 
 type ButtonProps = {
-children:string
-bg?: keyof typeof bgMap
-width?: keyof typeof widthMap
+children:string;
+bg?: keyof typeof bgMap;
+width?: keyof typeof widthMap;
 onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 
 
-const bgMap={
+export const bgMap={
   blue: 'bg-blue-500 rounded hover:bg-blue-600',
   yellow: 'bg-yellow-500 rounded hover:bg-yellow-600',
   gray: 'bg-gray-500 rounded hover:bg-gray-600'

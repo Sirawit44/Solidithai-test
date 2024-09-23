@@ -10,7 +10,7 @@ const registerSchema = z.object({
     .max(30, "Last name must be at most 30 characters long"),
   
   email: z.string()
-    .email("Invalid email format"), // **ไม่ต้องตรวจสอบ TLD**
+    .email("Invalid email format"), // **ไม่ TLD**
   
   password: z.string()
     .min(6, "Password must be at least 6 characters long")

@@ -3,19 +3,44 @@ import Button from '../../../components/button';
 import Input from '../../../components/Input';
 import { zodResolver } from '@hookform/resolvers/zod';
 import loginSchema  from '../validators/validate-login';
+import { useAuth } from '../../../contexts/AuthContext';
+import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
+import { AxiosError } from 'axios';
+
 
 type FormData = {
   email: string;
   password: string;
 };
 
+
 export default function LoginForm() {
   const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
     resolver: zodResolver(loginSchema),
   });
 
-  const onSubmit: SubmitHandler<FormData> = (data) => {
-    console.log(data);
+  const navigate = useNavigate();
+  const {login} = useAuth()
+
+  const onSubmit: SubmitHandler<FormData> = async (data) => {
+    try {
+      await login(data);
+      console.log("Login successful:", data);
+      navigate('/')
+      onCloseModal()
+      toast.success('login success')
+    } catch (error) {
+      console.log(error)
+      if (error instanceof AxiosError) {
+        const message = error.response?.status === 400 
+          ? 'Invalid email or password' 
+          : 'Internal server error';
+        toast.error(message);
+      } else {
+        toast.error('An unexpected error occurred');
+      }
+    }
   };
 
   return (
