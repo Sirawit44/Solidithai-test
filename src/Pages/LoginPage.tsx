@@ -3,9 +3,11 @@ import RegisterContainer from "../features/authentication/components/RegisterCon
 
 export default function LoginPage() {
   return (
-    <div className="bg-pink-300 p-4 rounded-lg max-w-sm mx-auto shadow-lg mt-60">
-      <LoginForm />
-      <RegisterContainer/>
+    <div className="page-container">
+      <div className="bg-pink-300 p-4 rounded-lg max-w-sm mx-auto shadow-lg mt-60">
+        <LoginForm/>
+        <RegisterContainer/>
+      </div>
     </div>
   );
 }
