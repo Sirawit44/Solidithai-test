@@ -19,9 +19,9 @@ const widthMap={
 }
 
 
-export default function Button({ children, bg='blue',width, onClick}: ButtonProps) {
+export default function Button({ children, bg='blue', onClick}: ButtonProps) {
   return (
-    <button className={`px-3 py-1.5 mt-3 ${bgMap[bg]} ${widthMap[width]}`}
+    <button className={`px-3 py-1.5 mt-3 w-full ${bgMap[bg]}}`}
     onClick={onClick}>
       {children}
     </button>

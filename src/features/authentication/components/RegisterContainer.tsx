@@ -8,7 +8,7 @@ export default function RegisterContainer() {
   return (
     <>
       <div className="flex justify-center" onClick={()=>navigate('/register')}>
-        <Button bg='yellow' width="full">Create account</Button>
+        <Button bg='yellow'>Create account</Button>
       </div>
     </>
   )

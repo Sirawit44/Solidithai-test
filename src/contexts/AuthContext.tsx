@@ -12,7 +12,7 @@ interface AuthContextType {
   authUser: AuthUser | null;
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
-  register: (name: string, email: string, password: string) => Promise<void>;
+  signup: (firstname: string, lastname:string, age:number, gender:string, email: string, password: string, confirmPassword: string) => Promise<void>;
 }
 
 interface AuthContextProviderProps {
@@ -33,13 +33,13 @@ export default function AuthContextProvider({ children }: AuthContextProviderPro
     setAuthUser(null);
   };
 
-  const register = async (name: string, email: string, password: string) => {
-    const response = await axios.post('/api/register', { name, email, password });
+  const signup = async (firstname: string, lastname:string, age:number, gender:string, email: string, password: string, confirmPassword: string) => {
+    const response = await axios.post('/api/register', { firstname, lastname, age, gender, email, password, confirmPassword});
     setAuthUser(response.data);
 };
 
   return (
-    <AuthContext.Provider value={{ authUser, login, logout, register }}>
+    <AuthContext.Provider value={{ authUser, login, logout, signup }}>
       {children}
     </AuthContext.Provider>
   );
