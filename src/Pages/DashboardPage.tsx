@@ -59,23 +59,26 @@ export default function DashBoardPage() {
       (user.age !== undefined && user.age.toString().includes(searchLower))
     );
   }) : [];
-  
+
 
   return (
     <div className='page-container'>
       <div className='flex flex-col mt-10 w-full gap-6'>
-        <h1 style={{textAlign: "center", fontSize: '20px'}}>Dash Board</h1>
+        <h1 style={{ textAlign: "center", fontSize: '40px' }}>DASHBOARD</h1>
+        <div className='flex items-center justify-center'>
+          <div className='text-2xl'>WELCOME</div>
+        </div>        
         <input
           type="text"
           placeholder="Search by name, email, gender or age..."
           className='px-3 py-2 rounded-md focus:outline-none focus:ring-2'
-          style={{width: "70%", alignSelf: 'center'}}
+          style={{ width: "70%", alignSelf: 'center' }}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <Table headers={headers} data={filteredData} />
       </div>
 
-      </div>
+    </div>
   );
 };
