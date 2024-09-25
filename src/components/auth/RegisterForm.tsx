@@ -1,10 +1,9 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import Input from "../../../components/Input";
-import Button from "../../../components/button";
-import { useAuth } from "../../../contexts/AuthContext";
 import { AxiosError } from 'axios';
 import { toast } from 'react-toastify';
+import { useAuth } from '../../contexts/AuthContext';
+import { Input, Select, Button } from '../common';
 
 type FormData = {
   firstName: string;
@@ -52,6 +51,7 @@ export default function RegisterForm() {
     <form className="grid gap-4 mt-4" onSubmit={handleSubmit(onSubmit)}>
       <div className="grid grid-cols-2 gap-4">
         <div>
+          
           <Input
             placeholder="First name"
             error={errors.firstName?.message}
@@ -85,13 +85,18 @@ export default function RegisterForm() {
           />
         </div>
         <div>
-          <select id="gender" className="custom-select"  {...register("gender", { required: "Gender is required!" })}>
-            <option value="">Select your gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-            <option value="prefer-not-to-say">Prefer not to say</option>
-          </select>
+          <Select
+            id="gender"
+            label="Gender"
+            options={[
+              { value: 'male', label: 'Male' },
+              { value: 'female', label: 'Female' },
+              { value: 'other', label: 'Other' },
+              { value: 'prefer-not-to-say', label: 'Prefer not to say' },
+            ]}
+            register={register}
+            validation={{ required: 'Gender is required!' }}
+          />
           {errors.gender && <p style={{color:"rgb(239,68,68)", fontSize:'80%', marginTop:'5px'}}>{errors.gender.message}</p>}
         </div>
       </div>

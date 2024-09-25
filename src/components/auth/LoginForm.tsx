@@ -1,7 +1,6 @@
 import { useForm } from 'react-hook-form';
-import Button from '../../../components/button';
-import Input from '../../../components/Input';
-import { useAuth } from "../../../contexts/AuthContext";
+import { useAuth } from '../../contexts/AuthContext';
+import { Input, Button } from '../common';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { AxiosError } from 'axios';
@@ -25,7 +24,7 @@ export default function LoginForm() {
     const { email, password } = data;
     try {
         await login(email, password);
-        navigate('/dashboard'); 
+        navigate('/'); 
     } catch (error) {
         console.log(error);
         if (error instanceof AxiosError) {
@@ -74,7 +73,7 @@ export default function LoginForm() {
           })}
         />
 
-        <Button width="full">Log In</Button>
+        <Button>Log In</Button>
       </div>
     </form>
   )

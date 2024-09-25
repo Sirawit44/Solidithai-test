@@ -26,7 +26,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             error ? 'border-red-500 focus:ring-red-300' : 'border-gray-400 focus:border-blue-500 focus:ring-blue-300'
           }`}
         />
-        {error && <small className="text-red-500">{error}</small>} {/* แสดงข้อความผิดพลาด */}
+        {error && <small className="text-red-500">{error}</small>} 
       </>
     );
   }

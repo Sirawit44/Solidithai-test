@@ -11,31 +11,29 @@ html, body, #root {
   height: 100%;
 }
 
-
 .page-container{
-  width: 70%;
+  width: 80%;
   min-width: 300px;
   max-width: 1200px;
   height: inherit;
-  background-color: red;
   display: flex;
   justify-content: center;
   margin: auto;
 }
 
 .custom-select {
-  width: 100%;              /* Set full width or specific width */
-  max-width: 400px;          /* Max width to limit the size */
-  height: 40px;              /* Match input height */
-  padding: 10px;             /* Padding to match input */
-  border: 1px solid #ccc;    /* Border to make it look like input */
-  border-radius: 4px;        /* Rounded corners */
-  font-size: 16px;           /* Font size similar to input */
-  box-sizing: border-box;    /* Ensure padding is included in width/height */
+  width: 100%;              
+  max-width: 400px;          
+  height: 40px;              
+  padding: 10px;             
+  border: 1px solid #ccc;    
+  border-radius: 4px;        
+  font-size: 16px;           
+  box-sizing: border-box;    
 }
 
 .custom-select:focus {
-  border-color: #007bff;     /* Optional: Focus state for a better look */
-  outline: none;             /* Remove default outline */
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Optional: Add shadow on focus */
+  border-color: #007bff;     
+  outline: none;             
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
 }

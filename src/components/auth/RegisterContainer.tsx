@@ -1,5 +1,4 @@
-import { useState } from "react";
-import Button from "../../../components/button";
+import { Button } from '../common';
 import { useNavigate } from "react-router-dom";
 
 export default function RegisterContainer() {
