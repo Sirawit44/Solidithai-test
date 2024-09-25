@@ -3,17 +3,14 @@
 This project is a React application demonstrating user authentication, protected routes, dynamic user data fetching using Axios, and notifications using `react-toastify`. The application is styled using Tailwind CSS and provides smooth animations with Framer Motion. User data is mocked using Mock Service Worker (MSW), allowing for seamless API mocking in development.
 
 ## Table of Contents
-
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Installation](#installation)
-- [Folder Structure](#folder-structure)
 - [Usage](#usage)
   - [Authentication](#authentication)
   - [Protected Routes](#protected-routes)
   - [User Details](#user-details)
-- [Available Scripts](#available-scripts)
-- [License](#license)
+
 
 ## Features
 
@@ -43,22 +40,22 @@ This project is a React application demonstrating user authentication, protected
    git clone https://github.com/Sirawit44/Solidithai-test.git
    ```
 
-2. **Navigate to the project directory:
+2. Navigate to the project directory:
 
   ```bash
    cd react-auth-app
   ```
 
-3. **Install dependencies:
+3. Install dependencies:
 
   ```bash
    npm install
   ```
 
-4. **Start the development server:
+4. Start the development server:
 
   ```bash
    npm start
   ```
-
-**The app will run on http://localhost:5173.
+  
+The app will run on http://localhost:5173
