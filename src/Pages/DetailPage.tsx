@@ -37,7 +37,6 @@ export default function DetailPage() {
   return (
     <div className="flex flex-col items-center justify-center p-6 bg-gray-100 min-h-screen">
       <div className="flex justify-around bg-white shadow-md rounded-lg p-6 w-full max-w-md">
-        <div>
           <h1 className="text-2xl font-bold text-blue-600 mb-4">
             {user.firstName} {user.lastName}
           </h1>
@@ -47,10 +46,6 @@ export default function DetailPage() {
           <Link to="/" className="inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
             Back to Users List
           </Link>
-        </div>
-        <div className='image-frame'>
-          <img src='https://picsum.photos/id/237/200/300?random="1" ' alt='Random' />
-        </div>
       </div>
     </div>
   );
