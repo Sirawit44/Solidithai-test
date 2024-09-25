@@ -18,8 +18,8 @@ This project is a React application demonstrating user authentication, protected
 ## Features
 
 - **User Authentication**: Login and registration flows with authenticated routes.
-- **Protected Routes**: Redirects unauthorized users and displays a toast notification using `react-toastify`.
-- **Axios API Integration**: Dynamic user data fetching with Axios from a mocked API.
+- **Protected Routes**: Redirects unauthorized users to login page.
+- **Axios API Integration**: Using Axios to fetch data from a mocked API.
 - **User Details Page**: Displays user information based on dynamic routes (`/user/:id`).
 - **Loading Animations**: Framer Motion is used to create smooth animated loading indicators.
 - **Responsive UI**: Styled with Tailwind CSS for a clean, responsive design.
@@ -40,5 +40,25 @@ This project is a React application demonstrating user authentication, protected
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/react-auth-app.git
+   git clone https://github.com/Sirawit44/Solidithai-test.git
    ```
+
+2. **Navigate to the project directory:
+
+  ```bash
+   cd react-auth-app
+  ```
+
+3. **Install dependencies:
+
+  ```bash
+   npm install
+  ```
+
+4. **Start the development server:
+
+  ```bash
+   npm start
+  ```
+
+**The app will run on http://localhost:5173.
