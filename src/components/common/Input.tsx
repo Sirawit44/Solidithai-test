@@ -21,7 +21,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           onChange={onChange}
           value={value}
           name={name}
-          ref={ref} // ใช้ ref
+          ref={ref}
           className={`w-full px-3 py-2 rounded-md focus:outline-none focus:ring-2 ${
             error ? 'border-red-500 focus:ring-red-300' : 'border-gray-400 focus:border-blue-500 focus:ring-blue-300'
           }`}

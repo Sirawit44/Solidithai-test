@@ -3,13 +3,13 @@ import { Navigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 interface ProtectedRouteProps {
-  isAuthenticated: boolean; // Prop to check if the user is authenticated
-  children: React.ReactNode; // The components to render if authenticated
+  isAuthenticated: boolean; 
+  children: React.ReactNode; 
 }
 
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ isAuthenticated, children }) => {
   if (!isAuthenticated) {
-    toast.error("You must be logged in to access this page."); // Show toast notification
+    toast.error("You must be logged in to access this page."); 
   }
 
   return isAuthenticated ? <>{children}</> : <Navigate to="/login" />;

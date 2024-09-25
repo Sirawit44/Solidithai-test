@@ -3,7 +3,6 @@ import { lazy } from "react";
 import NotFound from "../Pages/NotFoundPage";
 import { useAuth } from "../contexts/AuthContext";
 import ProtectedRoute from "../components/ProtectedRoute";
-// import ProtectedRoute from "../components/protectRoute";
 
 // Lazy load pages
 const LoginPage = lazy(() => import('../Pages/LoginPage'));
@@ -26,7 +25,7 @@ export default function Router() {
       ),
     },
     {
-      path: '/users/:id', // Add UserDetails route
+      path: '/users/:id', 
       element: (
         <ProtectedRoute isAuthenticated={isAuthenticated}>
           <DetailPage />

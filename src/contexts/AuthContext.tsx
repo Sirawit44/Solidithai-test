@@ -1,5 +1,4 @@
 import { createContext, useContext, useState, ReactNode } from "react";
-// import axiosInstance from '../api/axiosInstance';
 import axios from "axios";
 
 interface AuthUser {

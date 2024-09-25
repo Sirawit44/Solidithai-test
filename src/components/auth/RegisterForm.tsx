@@ -79,7 +79,7 @@ export default function RegisterForm() {
             {...register("age", {
               required: 'Age is required!',
               validate: {
-                isNumber: (value) => !isNaN(value) || "Age must be a number", // Ensure it's a number
+                isNumber: (value) => !isNaN(value) || "Age must be a number", 
               }
             })}
           />

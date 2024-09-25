@@ -1,4 +1,3 @@
-// src/components/ProtectedRoute.tsx
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -10,7 +9,7 @@ interface ProtectedRouteProps {
 
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ isAuthenticated, children }) => {
   if (!isAuthenticated) {
-    toast.error("You must be logged in to access this page."); // Show toast notification
+    toast.error("You must be logged in to access this page.");
   }
 
   return isAuthenticated ? <>{children}</> : <Navigate to="/login" />;
