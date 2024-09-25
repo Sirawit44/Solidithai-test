@@ -13,12 +13,7 @@ interface LoginFormInputs {
 export default function LoginForm() {
   const { login } = useAuth();
   const navigate = useNavigate();
-  const { register, handleSubmit, formState: { errors } } = useForm<LoginFormInputs>({
-    defaultValues: {
-      email: "admin@example.com",
-      password: "123456",
-    }
-  });
+  const { register, handleSubmit, formState: { errors } } = useForm<LoginFormInputs>();
 
   const onSubmit = async (data: LoginFormInputs) => {
     const { email, password } = data;

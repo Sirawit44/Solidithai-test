@@ -17,17 +17,7 @@ type FormData = {
 
 export default function RegisterForm() {
   const { signup } = useAuth();
-  const { register, handleSubmit,formState: { errors } } = useForm<FormData>({
-    defaultValues: {
-      firstName: "John",
-      lastName: "Doe",
-      age:19,
-      gender: 'female',
-      email: "admin@example.com",
-      password: "123456",
-      confirmPassword: "123456",
-    }
-  });
+  const { register, handleSubmit,formState: { errors } } = useForm<FormData>();
 
   const navigate = useNavigate();
   const onSubmit = async (data: FormData) => {
